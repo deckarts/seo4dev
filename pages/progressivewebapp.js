@@ -1,5 +1,4 @@
-export const pwaManifest =
-`{
+export const pwaManifest = `{
   "name": "SEO4DEV",
   "background_color": "black",
   "theme_color": "lightgreen",
@@ -23,8 +22,7 @@ export const pwaManifest =
   "start_url": "/offline.html"
 }`;
 
-export const pwaWorker =
-`self.addEventListener('install', (e) => {
+export const pwaWorker = `self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open('seo4-dev').then((cache) => cache.addAll([
       '/offline.html',
@@ -38,12 +36,10 @@ self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => response || fetch(e.request)),
   );
-});`
+});`;
 
-
-export const pwaScript =
-`if ('serviceWorker' in navigator) {
+export const pwaScript = `if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/service-worker.js')
     .then(() => { console.log('Service Worker Registered'); });
-}`
+}`;

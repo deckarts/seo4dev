@@ -1,9 +1,9 @@
-import { navigation } from './components/navigation';
-import { aside      } from './components/aside';
-import { footer     } from './components/footer';
+import { navigation } from "./components/navigation";
+import { aside } from "./components/aside";
+import { footer } from "./components/footer";
 
 export const indexHtml =
-`<!DOCTYPE html>
+  `<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -20,7 +20,9 @@ export const indexHtml =
   <body>
     <a class="skip-link" href="#main">Skip to main</a>
     <header>
-      <nav>` + navigation + `</nav>
+      <nav>` +
+  navigation +
+  `</nav>
     </header>
     <main id="main">
       <h1>SEO for Developers</h1>
@@ -29,9 +31,13 @@ export const indexHtml =
           <h1>Workshop Announcements</h1>
           <p>The next workshop is Thursday and Friday June 17th and 18th.</p>
         </section>
-      ` + aside + `
+      ` +
+  aside +
+  `
       </article>
     </main>
-    ` + footer + `
+    ` +
+  footer +
+  `
   </body>
 </html>`;
