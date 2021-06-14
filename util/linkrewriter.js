@@ -3,7 +3,7 @@ export const linkRewriter = {
     const link_href = element.getAttribute("href");
     const link_rel = element.getAttribute("rel");
     if (link_rel == "canonical") {
-      element.setAttribute("href", "https://internetmarketingninjas.com");
+      element.setAttribute("href", "https://www.internetmarketingninjas.com");
     } else if (!link_href) {
       element.setAttribute("href", "missing-href");
       element.setAttribute("defer", "");
