@@ -5,18 +5,22 @@ import { pwaManifest, pwaWorker, pwaScript } from "./pages/progressivewebapp";
 import { indexHtml } from "./pages/index";
 import { smxadvHtml } from "./pages/smxadv";
 
+//stylesheets
+import { stylesheet } from "./pages/stylesheet.js";
+
 //re-writers
 import { aRewriter } from "./util/arewriter";
 import { imgRewriter } from "./util/imgrewriter";
 import { linkRewriter } from "./util/linkrewriter";
 import { scriptRewriter } from "./util/scriptrewriter";
+import { titleRewriter } from "./util/titlerewriter";
 
 //headers
 const defaultHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
     "content-security-policy":
-      "default-src 'self'; style-src 'unsafe-inline'; img-src 'self' via.placeholder.com; object-src 'none'; base-uri 'none'; report-uri 'none';"
+      "default-src 'self'; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'none'; base-uri 'none'; report-uri 'none';"
   }
 };
 
@@ -24,7 +28,7 @@ const smxadvHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
     "content-security-policy":
-      "default-src 'self'; frame-src slides.com; style-src 'unsafe-inline' *.slid.es; font-src 'self' data: *.slid.es; img-src 'self' *.slid.es; object-src 'none'; base-uri 'none';"
+      "default-src 'self'; frame-src slides.com; style-src 'unsafe-inline' seo4.dev *.slid.es; font-src 'self' data: *.slid.es; img-src 'self' *.slid.es; object-src 'none'; base-uri 'none';"
   }
 };
 
@@ -33,6 +37,10 @@ async function dispatchRequest(path) {
   if (path == "/manifest.json") {
     return new Response(pwaManifest, {
       headers: { "content-type": "application/manifest+json;" }
+    });
+  } else if (path == "/style.css") {
+    return new Response(stylesheet, {
+      headers: { "content-type": "text/css" }
     });
   } else if (path == "/service-worker.js") {
     return new Response(pwaWorker, {
@@ -58,7 +66,10 @@ async function dispatchSubRequest(path) {
       .transform(page);
   } else if (path == "/sel/") {
     const page = await fetch("https://searchengineland.com/");
-    return new HTMLRewriter().on("a", aRewriter).transform(page);
+    return new HTMLRewriter()
+      .on("a", aRewriter)
+      .on("title", titleRewriter)
+      .transform(page);
   } else {
     return new Response("dispatch subrequest path not found", { status: 404 });
   }
@@ -75,12 +86,6 @@ addEventListener("fetch", event => {
     case "/sel/":
       event.respondWith(dispatchSubRequest(path));
       break;
-    case "/2021/06/smx-adv/":
-      event.respondWith(new Response(smxadvHtml, smxadvHeaders));
-      break;
-    case "/":
-      event.respondWith(new Response(indexHtml, defaultHeaders));
-      break;
     case "/manifest.json":
       event.respondWith(dispatchRequest(path));
       break;
@@ -88,6 +93,9 @@ addEventListener("fetch", event => {
       event.respondWith(dispatchRequest(path));
       break;
     case "/script.js":
+      event.respondWith(dispatchRequest(path));
+      break;
+    case "/style.css":
       event.respondWith(dispatchRequest(path));
       break;
     case "/favicon.ico":
@@ -101,6 +109,12 @@ addEventListener("fetch", event => {
       break;
     case "/offline.html":
       event.respondWith(new Response("offline"));
+      break;
+    case "/2021/06/smx-adv/":
+      event.respondWith(new Response(smxadvHtml, smxadvHeaders));
+      break;
+    case "/":
+      event.respondWith(new Response(indexHtml, defaultHeaders));
       break;
     case "/robots.txt":
       event.respondWith(new Response("User-agent: *\nDisallow: /honeypot/"));

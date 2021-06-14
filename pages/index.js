@@ -14,8 +14,10 @@ export const indexHtml =
     <meta name="theme-color" content="lightgreen">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="https://via.placeholder.com/192">
+    <link rel="stylesheet" href="https://seo4.dev/style.css">
     <script src="script.js" defer></script>
-    <style>.skip-link { position: absolute; top: -40px; left: 0; background: #000000; color: white; padding: 8px; z-index: 100; } .skip-link:focus { top: 0; }</style>
+    <style>.skip-link { position:absolute; top:-40px; left:0; background:#000000; color:white; padding:8px; z-index:100; } .skip-link:focus { top:0; }</style>
+    <style>article, section { border:none; }</style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main</a>
