@@ -1,11 +1,11 @@
-//TODO progressive web app inline script at end of body to register worker plus
+//progressive web app
 import { pwaManifest, pwaWorker, pwaScript } from "./pages/progressivewebapp";
 
 //pages
 import { indexHtml } from "./pages/homeindex";
 import { smxadvHtml } from "./pages/smxadv";
 
-//TODO stylesheets optional at this point
+//stylesheets
 import { stylesheet } from "./pages/stylesheet.js";
 
 //re-writers
@@ -16,7 +16,7 @@ import { scriptRewriter } from "./util/scriptrewriter";
 import { schemaRewriter } from "./util/schemarewriter";
 import { titleRewriter } from "./util/titlerewriter";
 
-//TODO headers by template
+//header handlers
 const defaultHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
@@ -33,7 +33,7 @@ const smxadvHeaders = {
   }
 };
 
-//TODO dispatch handlers using endsWith() and match logic for mime-types
+//handler dispatcher
 async function dispatchRequest(path) {
   if (path == "/detlef.jpg") {
     const detlefImg0 = await fetch(
@@ -115,7 +115,7 @@ async function dispatchSubRequest(path) {
   }
 }
 
-//TODO router expressions with better dispatching
+//crude router
 addEventListener("fetch", event => {
   const parsedUrl = new URL(event.request.url);
   let path = parsedUrl.pathname;
