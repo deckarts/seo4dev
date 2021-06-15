@@ -1,7 +1,10 @@
 export const scriptRewriter = {
   element(element) {
-    if (element.getAttribute("type")) {
-      element.removeAttribute("type");
+    const script_type = element.getAttribute("type");
+    if (script_type) {
+      if (!/ld\+json/.test(script_type)) {
+        element.removeAttribute("type");
+      }
     }
     const script_src = element.getAttribute("src");
     const add_async = ["/global.js"];

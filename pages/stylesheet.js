@@ -1,5 +1,4 @@
-export const stylesheet =
-`article
+export const stylesheet = `article
 { padding:5px; border:dotted 3px #ff006e; margin-top:5px; }
 
 header

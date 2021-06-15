@@ -2,7 +2,7 @@ export const pwaManifest = `{
   "name": "SEO4DEV",
   "background_color": "black",
   "theme_color": "lightgreen",
-  "description": "Shows placeholder pictures. Hey, at least it isn't cats.",
+  "description": "Companion for SEO for Developers Workshops",
   "display": "standalone",
   "icons": [
     {
@@ -17,7 +17,7 @@ export const pwaManifest = `{
       "purpose": "any maskable"
     }
   ],
-  "name": "Awesome placeholder pictures",
+  "name": "Awesome placeholders",
   "short_name": "Placeholders",
   "start_url": "/offline.html"
 }`;
@@ -26,7 +26,6 @@ export const pwaWorker = `self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open('seo4-dev').then((cache) => cache.addAll([
       '/offline.html',
-      '/script.js',
     ])),
   );
 });
