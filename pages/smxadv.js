@@ -28,7 +28,7 @@ export const smxadvHtml =
       <article style="min-height: 500px;">
         <h2>SMX Advanced (June 17th, 18th)</h2>
         <img alt="SMX Advanced Placeholder" srcset="https://via.placeholder.com/289x210/000000/FFFFFF/?text=Presentation+available+June+17th 289w, https://via.placeholder.com/576x420/000000/FFFFFF/?text=Presentation+available+June+17th 576w, https://via.placeholder.com/1152x840/000000/FFFFFF/?text=Presentation+available+June+17th 1152w" sizes="576vw" width="576" height="420" src="https://via.placeholder.com/576x420/000000/FFFFFF/?text=Presentation+available+June+17th">
-        <iframe title="SEO for Developers Presentaion" style="display:none; position:absolute; left:25px; border-top:10px solid #34adeb;" src="https://slides.com/deckart/seo4dev/embed?byline=hidden&share=hidden" width="576" height="420" allowfullscreen></iframe>
+        <iframe title="SEO for Developers Presentation" style="display:none; position:absolute; left:25px; border-top:10px solid #34adeb;" src="https://slides.com/deckart/seo-for-developers-jun-2021/embed?byline=hidden&share=hidden" width="576" height="420" allowfullscreen></iframe>
         <img alt="SMX Advanced Logo" style="display:none; position:relative; top:353px; float:left; width:100px;" width="484" height="186" src="/smx.jpg">
       </article>
       <section>
