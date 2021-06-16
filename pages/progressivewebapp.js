@@ -12,7 +12,7 @@ export const pwaManifest = `{
       "type": "image/png"
     },
     {
-      "src": "https://via.placeholder.com/5l2",
+      "src": "https://via.placeholder.com/512",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
