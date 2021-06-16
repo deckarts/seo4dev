@@ -1,8 +1,9 @@
 export const pwaManifest = `{
-  "name": "SEO4DEV",
+  "name": "seo4dev",
+  "short_name": "seo4dev",
   "background_color": "black",
   "theme_color": "lightgreen",
-  "description": "Companion for SEO for Developers Workshops",
+  "description": "Companion app for our SEO for Developers Workshops",
   "display": "standalone",
   "icons": [
     {
@@ -17,8 +18,6 @@ export const pwaManifest = `{
       "purpose": "any maskable"
     }
   ],
-  "name": "Awesome placeholders",
-  "short_name": "Placeholders",
   "start_url": "/offline.html"
 }`;
 
