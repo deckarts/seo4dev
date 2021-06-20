@@ -1,12 +1,12 @@
 //progressive web app
-import { pwaManifest, pwaWorker, pwaScript } from "./pages/progressivewebapp";
+import { pwaManifest, pwaWorker, pwaScript } from "./pages/components/progressivewebapp";
 
 //pages
 import { indexHtml } from "./pages/homeindex";
 import { smxadvHtml } from "./pages/smxadv";
 
 //stylesheets
-import { stylesheet } from "./pages/stylesheet.js";
+import { stylesheet } from "./pages/components/styles.js";
 
 //re-writers
 import { aRewriter } from "./util/arewriter";
@@ -101,7 +101,7 @@ async function dispatchSubRequest(path) {
       .on("a", aRewriter)
       .on("img", imgRewriter)
       .on("link", linkRewriter)
-      .on("script", scriptRewriter)
+      .on("script", schemaRewriter)
       .transform(page);
   } else if (path == "/sel/") {
     const page = await fetch("https://searchengineland.com/");
