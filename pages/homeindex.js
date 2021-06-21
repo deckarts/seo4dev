@@ -32,7 +32,7 @@ export const indexHtml = `<!DOCTYPE html>
       <h1>SEO for Developers</h1>
       <article>
           <h2>Workshop Announcements</h2>
-          <p>I am waiting on pending acceptance for a panel position on Core Web Vitals optimization at PubCon Pro Florida, in-person in early August.</p>
+          <p>I am waiting on pending acceptance for a panel position on Core Web Vitals optimization at PubCon Pro Florida (in-person) on August 3rd, 4th, and 5th.</p>
       </article>
       <section>
         <h2>About</h2>
