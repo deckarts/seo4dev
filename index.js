@@ -3,7 +3,8 @@ import { pwaManifest, pwaWorker, pwaScript } from "./pages/components/progressiv
 
 //pages
 import { indexHtml } from "./pages/homeindex";
-import { smxadvHtml } from "./pages/smxadv";
+import { scheduleHtml } from "./pages/schedule";
+import { smxReportHtml, smxAdvHtml, smxNextHtml, smxCodeHtml } from "./pages/smxevents";
 
 //stylesheets
 import { stylesheet } from "./pages/components/styles.js";
@@ -21,19 +22,23 @@ const defaultHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
     "content-security-policy":
-      "default-src 'self'; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';"
+      "default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';"
   }
 };
 
-const smxadvHeaders = {
+const smxHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
     "content-security-policy":
-      "default-src 'self'; frame-src slides.com; style-src 'unsafe-inline' seo4.dev *.slid.es; img-src 'self' via.placeholder.com; font-src 'self' data: *.slid.es; object-src 'self'; base-uri 'self';"
+      "default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev *.slid.es; img-src 'self' via.placeholder.com; font-src 'self' data: *.slid.es; frame-src slides.com; object-src 'self'; base-uri 'self';",
+    //Strategy to fetch the frame src
+    //to add headers to the response
+    //"Access-Control-Allow-Origin":
+    //  "https://static.slid.es"
   }
 };
 
-//handler dispatcher
+//dispatch handlers
 async function dispatchRequest(path) {
   if (path == "/detlef.jpg") {
     const detlefImg0 = await fetch(
@@ -115,7 +120,7 @@ async function dispatchSubRequest(path) {
   }
 }
 
-//crude router
+//our crude router needs a new strategy
 addEventListener("fetch", event => {
   const parsedUrl = new URL(event.request.url);
   let path = parsedUrl.pathname;
@@ -162,14 +167,29 @@ addEventListener("fetch", event => {
     case "/offline.html":
       event.respondWith(new Response("offline"));
       break;
-    case "/2021/06/smx-adv/":
-      event.respondWith(new Response(smxadvHtml, smxadvHeaders));
+    case "/schedule/":
+      event.respondWith(new Response(scheduleHtml, defaultHeaders));
+      break;
+    case "/smx-report/":
+      event.respondWith(new Response(smxReportHtml, smxHeaders));
+      break;
+    case "/smx-advanced/":
+      event.respondWith(new Response(smxAdvHtml, smxHeaders));
+      break;
+    case "/smx-next/":
+      event.respondWith(new Response(smxNextHtml, defaultHeaders));
+      break;
+    case "/smx-code/":
+      event.respondWith(new Response(smxCodeHtml, defaultHeaders));
       break;
     case "/":
       event.respondWith(new Response(indexHtml, defaultHeaders));
       break;
     case "/robots.txt":
       event.respondWith(new Response("User-agent: *\nDisallow: /honeypot/"));
+      break;
+    case "/2021/06/smx-adv/":
+      event.respondWith(Response.redirect("https://seo4.dev/smx-advanced/", 301));
       break;
     case "/sitemap.xml":
       event.respondWith(

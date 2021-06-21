@@ -12,9 +12,12 @@ export const indexHtml = `<!DOCTYPE html>
     <meta name="description" content="SMX Advanced 2021: SEO for Developers series workshop by Detlef Johnson">
     <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
     <meta name="theme-color" content="lightgreen">
+    <link rel="preconnect" href="https://via.placeholder.com">
+    <link rel="prefetch" href="/smx-report/" as="document">
+    <link rel="prefetch" href="/smx-advanced/" as="document">
+    <link rel="prefetch" href="/schedule/" as="document">
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="https://via.placeholder.com/192">
-    <link rel="prefetch" href="/2021/06/smx-adv/" as="document">` +
+    <link rel="apple-touch-icon" href="https://via.placeholder.com/192">` +
   criticalInlineStyle +
   `
   </head>
@@ -29,8 +32,7 @@ export const indexHtml = `<!DOCTYPE html>
       <h1>SEO for Developers</h1>
       <article>
           <h2>Workshop Announcements</h2>
-          <p>The latest workshop was held June 17th and 18th and included a "Birds of a Feather" agency / developer communications session.</p>
-          <p>Stay tuned for the next one!</p>
+          <p>I am waiting on pending acceptance for a panel position on Core Web Vitals optimization at PubCon Pro Florida, in-person in early August.</p>
       </article>
       <section>
         <h2>About</h2>

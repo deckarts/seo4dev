@@ -5,5 +5,5 @@ export const aside = `
             <figcaption>Detlef Johnson</figcaption>
           </figure>
           <h2>SMX Workshops Companion Website</h2>
-          <p>This is a demonstration website for live learning in SMX Workshops by Detlef Johnson, author of the Search Engine Land column: "SEO for Developers." <a title="Source Code at GitHub" rel="noopener" target="_blank" href="https://github.com/deckarts/seo4dev">GitHub</a></p>
+          <p>This prototype website and subsequent application services are for demonstrating Core Web Vitals and best practices for learning in SMX Workshops by <a rel="noopener" target="_blank" href="https://searchengineland.com/author/detlef-johnson">Detlef Johnson</a>, author of the Search Engine Land column: "SEO for Developers."</p>
         </aside>`;
