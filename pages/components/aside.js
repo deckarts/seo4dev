@@ -5,5 +5,5 @@ export const aside = `
             <figcaption>Detlef Johnson</figcaption>
           </figure>
           <h2>SMX Workshops Companion Website</h2>
-          <p>This prototype website and subsequent application services are for demonstrating Core Web Vitals and best practices for learning in SMX Workshops by <a rel="noopener" target="_blank" href="https://searchengineland.com/author/detlef-johnson">Detlef Johnson</a>, author of the Search Engine Land column: "SEO for Developers."</p>
+          <p>This prototype website and subsequent application services are for demonstrating Core Web Vitals and best practices for learning in SMX Workshops by <a title="Detlef Johnson" rel="noopener" target="_blank" href="https://searchengineland.com/author/detlef-johnson">Detlef Johnson</a>, author of the Search Engine Land column: "SEO for Developers."</p>
         </aside>`;

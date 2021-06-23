@@ -3,6 +3,7 @@ import { pwaManifest, pwaWorker, pwaScript } from "./pages/components/progressiv
 
 //pages
 import { indexHtml } from "./pages/homeindex";
+import { hireHtml } from "./pages/hire";
 import { scheduleHtml } from "./pages/schedule";
 import { smxReportHtml, smxAdvHtml, smxNextHtml, smxCodeHtml } from "./pages/smxevents";
 
@@ -10,6 +11,7 @@ import { smxReportHtml, smxAdvHtml, smxNextHtml, smxCodeHtml } from "./pages/smx
 import { stylesheet } from "./pages/components/styles.js";
 
 //re-writers
+import { htmlRewriter } from "./util/htmlrewriter";
 import { aRewriter } from "./util/arewriter";
 import { imgRewriter } from "./util/imgrewriter";
 import { linkRewriter } from "./util/linkrewriter";
@@ -100,6 +102,13 @@ async function dispatchSubRequest(path) {
     return new HTMLRewriter()
       .on("script", schemaRewriter)
       .transform(page);
+  } else if(path == "/nextjs/") {
+    const page = await fetch("https://cf-pages-next-artzipper.pages.dev/");
+    return new HTMLRewriter()
+      .on("html", htmlRewriter)
+      .on("link", linkRewriter)
+      .on("script", scriptRewriter)
+      .transform(page);
   } else if(path == "/imn/") {
     const page = await fetch("https://internetmarketingninjas.com/");
     return new HTMLRewriter()
@@ -125,6 +134,9 @@ addEventListener("fetch", event => {
   const parsedUrl = new URL(event.request.url);
   let path = parsedUrl.pathname;
   switch (path) {
+    case "/nextjs/":
+      event.respondWith(dispatchSubRequest(path));
+      break;
     case "/imn/":
       event.respondWith(dispatchSubRequest(path));
       break;
@@ -166,6 +178,9 @@ addEventListener("fetch", event => {
       break;
     case "/offline.html":
       event.respondWith(new Response("offline"));
+      break;
+    case "/hire/":
+      event.respondWith(new Response(hireHtml, defaultHeaders));
       break;
     case "/schedule/":
       event.respondWith(new Response(scheduleHtml, defaultHeaders));

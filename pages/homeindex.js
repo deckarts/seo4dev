@@ -31,7 +31,8 @@ export const indexHtml = `<!DOCTYPE html>
     <main id="main">
       <h1>SEO for Developers</h1>
       <article>
-          <h2>Workshop Announcements</h2>
+          <h2>Announcements</h2>
+          <p>TODO: As per request I will figure out a way to get my dotfiles in a Github repo for those who want it. You know who you are! :-)
           <p>I am waiting on pending acceptance for a panel position on Core Web Vitals optimization at PubCon Pro Florida (in-person) on August 3rd, 4th, and 5th.</p>
       </article>
       <section>

@@ -2,7 +2,7 @@ export const scriptRewriter = {
   element(element) {
     const script_type = element.getAttribute("type");
     if (script_type) {
-      if (!/ld\+json/.test(script_type)) {
+      if (!/ld\+json/.test(script_type) && !/application\/json/.test(script_type)) {
         element.removeAttribute("type");
       }
     }
@@ -19,7 +19,13 @@ export const scriptRewriter = {
         "src",
         "https://internetmarketingninjas.com" + script_src
       );
+    } else if (script_src && script_src.startsWith("/_next")) {
+      element.setAttribute(
+        "src",
+        "https://cf-pages-next-artzipper.pages.dev" + script_src
+      );
     }
+
     if (add_async.includes(script_src)) {
       element.setAttribute("async", "");
     } else if (add_defer.includes(script_src)) {

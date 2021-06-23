@@ -40,7 +40,7 @@ export const scheduleHtml = `<!DOCTYPE html>
         <strong>*TBD: Participation is pending.</strong>
       </article>
       <article>
-        <h2>Archive of Past Events</h2>
+        <h2>Past Events</h2>
         <h3>SMX Advanced</h3>
         <p>Our <a title="Latest SMX Workshop" href="/smx-advanced/">latest workshop</a> was held June 17th and 18th and included a "Birds of a Feather" agency / developer communications session.</p>
         <h3>SMX Report</h3>
