@@ -25,26 +25,27 @@ export const scheduleHtml = `<!DOCTYPE html>
   `</nav>
     </header>
     <main id="main">
-      <h1>Workshop Schedule</h1>
+      <h1>Conference Appearance Schedule</h1>
       <article>
-        <h2>PubCon 2021</h2>
-        <h3>PubCon Pro Florida</h3>
-        <p>August 3rd, 4th, &amp; 5th*</p>
-      </article>
-      <article>
-        <h2>SMX Workshops 2021</h2>
+        <h2>Workshops 2021</h2>
         <h3>SMX Next</h3>
-        <p>November 9th and 10th*</p>
-        <h3>SMX Code</h3>
-        <p>December 14th*</p>
-        <strong>*TBD: Participation is pending.</strong>
+        <p>November 9th and 10th (Virtual)*</p>
+        <h3>SMX Build</h3>
+        <p>December 14th (Virtual)*</p>
+        <strong>*Pending.</strong>
       </article>
       <article>
-        <h2>Past Events</h2>
+        <h2>Panel Appearance</h2>
+        <h3>PubCon Pro</h3>
+        <p>Late November (Las Vegas)*</p>
+        <strong>*Pending.</strong>
+      </article>
+      <article>
+        <h2>Past Workshop Events</h2>
         <h3>SMX Advanced</h3>
-        <p>Our <a title="Latest SMX Workshop" href="/smx-advanced/">latest workshop</a> was held June 17th and 18th and included a "Birds of a Feather" agency / developer communications session.</p>
+        <p>Our latest workshop was held June 17th and 18th and included a "Birds of a Feather" agency / developer communications session.</p>
         <h3>SMX Report</h3>
-        <p><a title="SMX Report Workshop" href="/smx-report/">Our debut workshop</a>! It was held February 24th and 25th, 2021. We got enough positive feedback to hold another one.</p>
+        <p>Our debut workshop! It was held February 24th and 25th, 2021. We got enough positive feedback to hold another one.</p>
       </article>
       <section>
         <h2>About</h2>

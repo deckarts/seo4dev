@@ -32,8 +32,9 @@ export const indexHtml = `<!DOCTYPE html>
       <h1>SEO for Developers</h1>
       <article>
           <h2>Announcements</h2>
-          <p>TODO: As per request I will figure out a way to get my dotfiles in a Github repo for those who want it. You know who you are! :-)
-          <p>I am waiting on pending acceptance for a panel position on Core Web Vitals optimization at PubCon Pro Florida (in-person) on August 3rd, 4th, and 5th.</p>
+          <p>TODO: As per request I will figure out how to get my dotfiles published in a Github repo for those who want them. You know who you are! :-)
+          <p>I am waiting on pending panel appearance on Core Web Vitals performance optimization techniques at PubCon Pro Las Vegas (possibly in-person) November.</p>
+          <p>Stay tuned for news about SMX Build in December.</p>
       </article>
       <section>
         <h2>About</h2>
