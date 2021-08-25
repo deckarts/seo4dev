@@ -6,6 +6,7 @@ import { indexHtml } from "./pages/homeindex";
 import { hireHtml } from "./pages/hire";
 import { scheduleHtml } from "./pages/schedule";
 import { smxReportHtml, smxAdvHtml, smxNextHtml, smxCodeHtml } from "./pages/smxevents";
+import { dotfilesHtml } from "./pages/dotfiles";
 
 //stylesheets
 import { stylesheet } from "./pages/components/styles.js";
@@ -184,6 +185,9 @@ addEventListener("fetch", event => {
       break;
     case "/schedule/":
       event.respondWith(new Response(scheduleHtml, defaultHeaders));
+      break;
+    case "/dotfiles/":
+      event.respondWith(new Response(dotfilesHtml, defaultHeaders));
       break;
     case "/smx-report/":
       event.respondWith(new Response(smxReportHtml, smxHeaders));
