@@ -9,7 +9,7 @@ export const indexHtml = `<!DOCTYPE html>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <title>SEO for Developers by Detlef Johnson</title>
-    <meta name="description" content="SMX Advanced 2021: SEO for Developers series workshop by Detlef Johnson">
+    <meta name="description" content="SMX Build 2021: SEO for Developers series workshop by Detlef Johnson">
     <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
     <meta name="theme-color" content="lightgreen">
     <link rel="preconnect" href="https://via.placeholder.com">
