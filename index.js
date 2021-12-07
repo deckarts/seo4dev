@@ -29,7 +29,7 @@ const defaultHeaders = {
     "content-security-policy":
       "frame-ancestors 'none'; default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';",
     "X-Frame-Options":
-      "DENY",
+      "SAMEORIGIN",
   }
 };
 
