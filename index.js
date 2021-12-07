@@ -24,8 +24,12 @@ import { titleRewriter } from "./util/titlerewriter";
 const defaultHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
+    "X-Content-Type-Options":
+      "nosniff",
     "content-security-policy":
-      "default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';"
+      "frame-ancestors 'none'; default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';",
+    "X-Frame-Options":
+      "DENY",
   }
 };
 
