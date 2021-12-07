@@ -27,18 +27,8 @@ export const scheduleHtml = `<!DOCTYPE html>
     <main id="main">
       <h1>Conference Appearance Schedule</h1>
       <article>
-        <h2>Workshops 2021</h2>
-        <h3>SMX Next</h3>
-        <p>November 9th and 10th (Virtual)*</p>
-        <h3>SMX Build</h3>
-        <p>December 14th (Virtual)*</p>
-        <strong>*Pending.</strong>
-      </article>
-      <article>
-        <h2>Panel Appearance</h2>
-        <h3>PubCon Pro</h3>
-        <p>Late November (Las Vegas)*</p>
-        <strong>*Pending.</strong>
+        <h2>SMX Build: SEO for Developers</h2>
+        <p>December 14th (Virtual)</p>
       </article>
       <article>
         <h2>Past Workshop Events</h2>
