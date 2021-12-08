@@ -25,9 +25,9 @@ export const hireHtml = `<!DOCTYPE html>
       <h1>Hire Detlef Johnson</h1>
       <article>
           <h2>Core Web Vitals Service</h2>
-          <p>You can retain me for optimization exclusively by proxy through my employer <a title="Internet Marketing Ninjas" href="https://www.internetmarketingninjas.com/">Internet Marketing Ninjas</a> to improve your performance scores for Google without the need to involve your developers. A working cloudflare account is required for service and Business level or better is recommended although the free tier can suffice.</p>
-          <h2>Workshops</h2>
-          <p>Workshops are available onsite or through remote connectivity via zoom or similar platform like how workshops are done at the SMX conference series. I do not offer exactly what is proprietary to SEO for Developers, privately, but can provide an extra emphasis on Core Web Vitals for performance improvement. You can request a special Workshop topic or agenda. References are available upon request.</p>
+          <p>You can retain me for optimization exclusively through my employer <a title="Internet Marketing Ninjas" href="https://www.internetmarketingninjas.com/">Internet Marketing Ninjas</a> to improve your performance scores. A cloudflare account is required for the edge computing service where you don't necessarily need to involve your developers.</p>
+          <h2>Conferences and Workshops</h2>
+          <p>Workshops are available onsite or through remote connectivity via zoom or similar platform. I can provide an emphasis on Core Web Vitals for performance improvement or you can request a special topic or agenda. References are available upon request.</p>
       </article>
       <section>
         <h2>About</h2>
