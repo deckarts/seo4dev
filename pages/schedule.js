@@ -11,13 +11,10 @@ export const scheduleHtml = `<!DOCTYPE html>
     <title>SMX Event Workshop Schedule</title>
     <meta name="description" content="Schedule of SMX Events with SEO for Developers Workshops planned.">
     <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
-    <link rel="prefetch" href="/" as="document">
-    <link rel="prefetch" href="/smx-report/" as="document">
-    <link rel="prefetch" href="/smx-advanced/" as="document">` +
-  criticalInlineStyle +
-  `
+    <link rel="prefetch" href="https://seo4.dev/" as="document">
+    <link rel="stylesheet" href="https://seo4.dev/style.css">
   </head>
-  <body style="max-width:650px; margin:0 auto;">
+  <body>
     <a class="skip-link" href="#main">Skip to main</a>
     <header>
       <nav>` +

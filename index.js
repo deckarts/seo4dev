@@ -20,14 +20,15 @@ import { scriptRewriter } from "./util/scriptrewriter";
 import { schemaRewriter } from "./util/schemarewriter";
 import { titleRewriter } from "./util/titlerewriter";
 
-//header handlers
+//craft headers
+//test: https://observatory.mozilla.org/analyze/seo4.dev
 const defaultHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
     "X-Content-Type-Options":
       "nosniff",
     "content-security-policy":
-      "frame-ancestors 'none'; default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';",
+      "frame-ancestors 'none'; form-action 'none'; default-src 'none'; script-src 'self' static.cloudflareinsights.com storage.googleapis.com; script-src-elem 'unsafe-inline' cdn.jsdelivr.net static.cloudflareinsights.com; connect-src 'self'; prefetch-src 'self'; manifest-src 'self'; style-src 'self'; img-src 'self' via.placeholder.com; object-src 'self'; base-uri 'self';",
     "X-Frame-Options":
       "SAMEORIGIN",
   }
@@ -37,11 +38,7 @@ const smxHeaders = {
   headers: {
     "content-type": "text/html;charset=UTF-8;",
     "content-security-policy":
-      "default-src 'self'; script-src 'self' static.cloudflareinsights.com; style-src 'unsafe-inline' seo4.dev *.slid.es; img-src 'self' via.placeholder.com; font-src 'self' data: *.slid.es; frame-src slides.com; object-src 'self'; base-uri 'self';",
-    //Strategy to fetch the frame src
-    //to add headers to the response
-    //"Access-Control-Allow-Origin":
-    //  "https://static.slid.es"
+      "frame-ancestors 'none'; form-action 'none'; default-src 'none'; script-src 'self' static.cloudflareinsights.com storage.googleapis.com; script-src-elem 'unsafe-inline' cdn.jsdelivr.net static.cloudflareinsights.com; connect-src 'self'; prefetch-src 'self'; manifest-src 'self'; style-src 'self' *.slid.es; img-src 'self' via.placeholder.com; font-src 'self' data: *.slid.es; frame-src slides.com; object-src 'self'; base-uri 'self';",
   }
 };
 
@@ -78,7 +75,7 @@ async function dispatchRequest(path) {
         "cache-control": "no-cache"
       }
     });
-  } else if (path == "/service-worker.js") {
+  } else if (path == "/pwabuilder-sw.js") {
     return new Response(pwaWorker, {
       headers: {
         "content-type": "text/javascript",
@@ -98,7 +95,11 @@ async function dispatchRequest(path) {
 }
 
 async function dispatchSubRequest(path) {
-  if (path == "/minwiz/") {
+  if (path == "/images/192x192.png") {
+    return await fetch("https://via.placeholder.com/192");
+  } else if (path == "/images/512x512.png") {
+    return await fetch("https://via.placeholder.com/512");
+  } else if (path == "/minwiz/") {
     return await fetch("http://detlefjohnson.com/minwiz.html");
   } else if (path == "/minwiz-schema.json") {
     return await fetch("http://detlefjohnson.com/demo-schema.json");
@@ -160,7 +161,7 @@ addEventListener("fetch", event => {
     case "/manifest.json":
       event.respondWith(dispatchRequest(path));
       break;
-    case "/service-worker.js":
+    case "/pwabuilder-sw.js":
       event.respondWith(dispatchRequest(path));
       break;
     case "/script.js":
@@ -183,6 +184,12 @@ addEventListener("fetch", event => {
       break;
     case "/offline.html":
       event.respondWith(new Response("offline"));
+      break;
+    case "/images/192x192.png":
+      event.respondWith(dispatchSubRequest(path));
+      break;
+    case "/images/512x512.png":
+      event.respondWith(dispatchSubRequest(path));
       break;
     case "/hire/":
       event.respondWith(new Response(hireHtml, defaultHeaders));

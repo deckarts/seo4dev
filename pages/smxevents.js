@@ -13,9 +13,8 @@ export const smxReportHtml = `<!DOCTYPE html>
     <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
     <link rel="preconnect" href="https://slides.com">
     <link rel="prefetch" href="/" as="document">
-    <link rel="prefetch" href="/schedule/" as="document">` +
-  criticalInlineStyle +
-  `
+    <link rel="prefetch" href="/schedule/" as="document">
+    <link rel="stylesheet" href="https://seo4.dev/style.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main</a>

@@ -1,5 +1,5 @@
 import { navigation } from "./components/navigation";
-import { criticalInlineStyle } from "./components/criticalinlinestyle";
+//import { criticalInlineStyle } from "./components/criticalinlinestyle";
 import { aside } from "./components/aside";
 import { footer } from "./components/footer";
 
@@ -12,16 +12,22 @@ export const indexHtml = `<!DOCTYPE html>
     <meta name="description" content="SMX Build 2021: SEO for Developers series workshop by Detlef Johnson">
     <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
     <meta name="theme-color" content="lightgreen">
-    <link rel="preconnect" href="https://via.placeholder.com">
     <link rel="prefetch" href="/smx-report/" as="document">
     <link rel="prefetch" href="/smx-advanced/" as="document">
     <link rel="prefetch" href="/schedule/" as="document">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="https://via.placeholder.com/192">` +
-  criticalInlineStyle +
-  `
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/images/192x192.png">
+    <link rel="stylesheet" href="/style.css">
+
+    <script type="module">
+      //console warning explanation:
+      //https://stackoverflow.com/questions/61205390/when-adding-a-javascript-library-chrome-complains-about-a-missing-source-map-w
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    </script>
   </head>
-  <body style="max-width:650px; margin:0 auto;">
+  <body>
     <a class="skip-link" href="#main">Skip to main</a>
     <header>
       <nav>` +
@@ -32,8 +38,6 @@ export const indexHtml = `<!DOCTYPE html>
       <h1>SEO for Developers</h1>
       <article>
           <h2>Announcements</h2>
-          <p style="display: none;">TODO: As per request I will figure out how to get my dotfiles published in a Github repo for those who want them. You know who you are! :-)
-          <p style="display: none;">I am waiting on pending panel appearance on Core Web Vitals performance optimization techniques at PubCon Pro Las Vegas (possibly in-person) November.</p>
           <p>Tune into <a rel="noopener" href="https://marketinglandevents.com/smx/build/">SMX Build December 14th</a>!</p>
       </article>
       <section>
