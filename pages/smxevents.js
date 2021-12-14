@@ -3,6 +3,45 @@ import { criticalInlineStyle } from "./components/criticalinlinestyle";
 import { aside } from "./components/aside";
 import { footer } from "./components/footer";
 
+export const smxBuildHtml = `<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>SMX Report 2021: SEO for Developers Workshop</title>
+    <meta name="description" content="SMX Report 2021: SEO for Developers workshop by Detlef Johnson.">
+    <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
+    <link rel="preconnect" href="https://slides.com">
+    <link rel="prefetch" href="/" as="document">
+    <link rel="prefetch" href="/schedule/" as="document">
+    <link rel="stylesheet" href="https://seo4.dev/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main</a>
+    <header>
+      <nav>` +
+  navigation +
+  `</nav>
+    </header>
+    <main id="main">
+      <h1>SMX Build</h1>
+      <article style="min-height: 500px;">
+        <h2>Presentation December 14th</h2>
+        <iframe title="SMX Build: SEO for Developers (Dec 2021)" style="position:relative; left:25px; border-top:10px solid #34adeb;" src="https://slides.com/deckart/smx-build-seo-for-developers-dec-2021/embed?byline=hidden&share=hidden" width="576" height="420" allowfullscreen></iframe>
+      </article>
+      <section>
+        <h2>About</h2>
+      ` +
+  aside +
+  `
+      </section>
+    </main>
+    ` +
+  footer +
+  `
+  </body>
+</html>`;
+
 export const smxReportHtml = `<!DOCTYPE html>
 <html lang="en-us">
   <head>

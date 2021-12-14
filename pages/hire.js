@@ -25,7 +25,7 @@ export const hireHtml = `<!DOCTYPE html>
       <h1>Hire Detlef Johnson</h1>
       <article>
           <h2>Core Web Vitals Service</h2>
-          <p>You can retain me for optimization exclusively through my employer <a title="Internet Marketing Ninjas" href="https://www.internetmarketingninjas.com/">Internet Marketing Ninjas</a> to improve your performance scores. A cloudflare account is required for the edge computing service where you don't necessarily need to involve your developers.</p>
+          <p>You can retain me independently for optimization work to improve your performance scores. A cloudflare account is required for the edge computing service, where you don't necessarily need to involve your developers, although it is recommended any illustrated modifications by workers be ultimately implemented at your origin server.</p>
           <h2>Conferences and Workshops</h2>
           <p>Workshops are available onsite or through remote connectivity via zoom or similar platform. I can provide an emphasis on Core Web Vitals for performance improvement or you can request a special topic or agenda. References are available upon request.</p>
       </article>

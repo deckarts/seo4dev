@@ -12,6 +12,7 @@ export const indexHtml = `<!DOCTYPE html>
     <meta name="description" content="SMX Build 2021: SEO for Developers series workshop by Detlef Johnson">
     <meta name="keywords" content="seo for developers, smx, smx advanced, smx advanced workshop">
     <meta name="theme-color" content="lightgreen">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="prefetch" href="/smx-report/" as="document">
     <link rel="prefetch" href="/smx-advanced/" as="document">
     <link rel="prefetch" href="/schedule/" as="document">
@@ -38,7 +39,8 @@ export const indexHtml = `<!DOCTYPE html>
       <h1>SEO for Developers</h1>
       <article>
           <h2>Announcements</h2>
-          <p>Tune into <a rel="noopener" href="https://marketinglandevents.com/smx/build/">SMX Build December 14th</a>!</p>
+          <p>Tune into <a rel="noopener" href="https://marketinglandevents.com/smx/build/">SMX Build, December 14th</a>!</p>
+          <p><a href="https://seo4.dev/smx-build/">Presentation online</a></p>
       </article>
       <section>
         <h2>About</h2>

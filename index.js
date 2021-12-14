@@ -5,7 +5,7 @@ import { pwaManifest, pwaWorker, pwaScript } from "./pages/components/progressiv
 import { indexHtml } from "./pages/homeindex";
 import { hireHtml } from "./pages/hire";
 import { scheduleHtml } from "./pages/schedule";
-import { smxReportHtml, smxAdvHtml, smxNextHtml, smxCodeHtml } from "./pages/smxevents";
+import { smxBuildHtml, smxReportHtml, smxAdvHtml, smxNextHtml, smxCodeHtml } from "./pages/smxevents";
 import { dotfilesHtml } from "./pages/dotfiles";
 
 //stylesheets
@@ -199,6 +199,9 @@ addEventListener("fetch", event => {
       break;
     case "/dotfiles/":
       event.respondWith(new Response(dotfilesHtml, defaultHeaders));
+      break;
+    case "/smx-build/":
+      event.respondWith(new Response(smxBuildHtml, smxHeaders));
       break;
     case "/smx-report/":
       event.respondWith(new Response(smxReportHtml, smxHeaders));
