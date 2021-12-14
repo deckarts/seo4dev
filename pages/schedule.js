@@ -25,7 +25,7 @@ export const scheduleHtml = `<!DOCTYPE html>
       <h1>Conference Appearance Schedule</h1>
       <article>
         <h2>SMX Build: SEO for Developers</h2>
-        <p><a href="https://seo4.dev/smx-build/">December 14th (Virtual)</p>
+        <p><a href="https://seo4.dev/smx-build/">December 14th (Virtual)</a></p>
       </article>
       <article>
         <h2>Past Workshop Events</h2>
